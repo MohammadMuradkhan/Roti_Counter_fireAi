@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jhelum Roti Counter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">JC</div>
+        <div><strong>Jhelum Mess</strong><span>Roti Counter</span></div>
+      </div>
+      <nav>
+        <button class="nav-item active" data-view="dashboard">▦ <span>Dashboard</span></button>
+        <button class="nav-item" data-view="records">▤ <span>Records</span></button>
+      </nav>
+      <button class="reset-button" id="resetData">↻ Reset sample data</button>
+    </aside>
+
+    <section class="content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">JHELUM MESS · NIT SRINAGAR</p>
+          <h1 id="pageTitle">Dashboard</h1>
+        </div>
+        <div class="date-pill" id="todayLabel"></div>
+      </header>
+
+      <div id="dashboardView">
+        <section class="stats-grid">
+          <article class="stat-card"><span>Records</span><strong id="recordCount">0</strong><small>Total observations</small></article>
+          <article class="stat-card"><span>Avg. students</span><strong id="avgStudents">0</strong><small>Per meal</small></article>
+          <article class="stat-card"><span>Avg. rotis cooked</span><strong id="avgCooked">0</strong><small>Per meal</small></article>
+          <article class="stat-card accent"><span>Wastage</span><strong id="wasteRate">0%</strong><small>Left over</small></article>
+        </section>
+
+        <section class="main-grid">
+          <article class="panel entry-panel">
+            <div class="panel-heading"><div><p class="eyebrow">NEW ENTRY</p><h2>Record a meal</h2></div></div>
+            <form id="mealForm">
+              <div class="form-grid">
+                <label>Date<input type="date" name="date" required /></label>
+                <label>Meal<select name="meal"><option>Lunch</option><option>Dinner</option></select></label>
+                <label>Time<input type="time" name="time" value="13:00" required /></label>
+                <label>Day type<select name="dayType"><option>Weekday</option><option>Weekend</option></select></label>
+                <label>Students served<input type="number" name="students" min="1" required /></label>
+                <label>Rotis cooked<input type="number" name="cooked" min="1" required /></label>
+                <label>Rotis left<input type="number" name="left" min="0" value="0" required /></label>
+                <label>Rotis ran out?<select name="ranOut"><option>No</option><option>Yes</option></select></label>
+              </div>
+              <button class="primary-button" type="submit">Save observation</button>
+            </form>
+          </article>
+
+          <article class="panel forecast-panel">
+            <div class="panel-heading"><div><p class="eyebrow">QUICK FORECAST</p><h2>Prepare for the next meal</h2></div></div>
+            <div class="forecast-controls">
+              <label>Meal<select id="forecastMeal"><option>Lunch</option><option>Dinner</option></select></label>
+              <label>Day type<select id="forecastDay"><option>Weekday</option><option>Weekend</option></select></label>
+              <label>Expected students<input id="forecastStudents" type="number" min="1" value="150" /></label>
+            </div>
+            <div class="forecast-result">
+              <span>Suggested preparation</span>
+              <strong id="suggestedRotis">0 <small>rotis</small></strong>
+              <p id="forecastNote">Based on similar meals</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel chart-panel">
+          <div class="panel-heading"><div><p class="eyebrow">RECENT ACTIVITY</p><h2>Roti demand</h2></div><div class="legend"><span><i class="cooked"></i>Cooked</span><span><i class="consumed"></i>Consumed</span></div></div>
+          <div class="chart" id="demandChart"></div>
+        </section>
+      </div>
+
+      <section class="panel records-panel" id="recordsView" hidden>
+        <div class="panel-heading"><div><p class="eyebrow">DATA LOG</p><h2>All observations</h2></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Date</th><th>Meal</th><th>Students</th><th>Cooked</th><th>Left</th><th>Consumed</th><th>Status</th></tr></thead><tbody id="recordsTable"></tbody></table></div>
+      </section>
+    </section>
+  </main>
+  <div class="toast" id="toast">Observation saved</div>
+  <script src="app.js"></script>
+</body>
+</html>
