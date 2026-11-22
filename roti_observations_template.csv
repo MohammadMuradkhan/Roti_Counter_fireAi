@@ -1,0 +1,21 @@
+date,meal,time_noted,spot,day_type,students_eaten,rotis_cooked,rotis_left,ran_out,ran_out_time,note
+2026-11-16,Lunch,13:00,Jhelum Mess,Weekday,145,520,18,No,,Normal lunch rush
+2026-11-16,Dinner,20:00,Jhelum Mess,Weekday,112,390,12,No,,Regular dinner
+2026-11-17,Lunch,13:00,Jhelum Mess,Weekday,158,550,5,No,,Higher student turnout
+2026-11-17,Dinner,20:00,Jhelum Mess,Weekday,120,410,8,No,,Slightly busy
+2026-11-18,Lunch,13:00,Jhelum Mess,Weekday,170,580,0,Yes,13:35,Rotis finished before last students ate
+2026-11-18,Dinner,20:00,Jhelum Mess,Weekday,105,370,22,No,,Lower dinner attendance
+2026-11-19,Lunch,13:00,Jhelum Mess,Weekday,162,560,7,No,,Steady demand
+2026-11-19,Dinner,20:00,Jhelum Mess,Weekday,118,400,10,No,,Normal dinner
+2026-11-20,Lunch,13:00,Jhelum Mess,Weekday,180,600,0,Yes,13:40,Unexpected rush
+2026-11-20,Dinner,20:00,Jhelum Mess,Weekday,125,430,6,No,,Few leftovers
+2026-11-21,Lunch,13:00,Jhelum Mess,Weekend,95,340,25,No,,Lower weekend attendance
+2026-11-21,Dinner,20:00,Jhelum Mess,Weekend,88,310,19,No,,Quiet dinner
+2026-11-22,Lunch,13:00,Jhelum Mess,Weekend,110,380,14,No,,Moderate attendance
+2026-11-22,Dinner,20:00,Jhelum Mess,Weekend,92,330,20,No,,Normal weekend dinner
+2026-11-23,Lunch,13:00,Jhelum Mess,Weekday,155,540,9,No,,Regular weekday rush
+2026-11-23,Dinner,20:00,Jhelum Mess,Weekday,115,395,11,No,,Normal dinner
+2026-11-24,Lunch,13:00,Jhelum Mess,Weekday,175,590,0,Yes,13:30,High demand
+2026-11-24,Dinner,20:00,Jhelum Mess,Weekday,130,440,4,No,,Almost all rotis consumed
+2026-11-25,Lunch,13:00,Jhelum Mess,Weekday,150,520,16,No,,Moderate lunch
+2026-11-25,Dinner,20:00,Jhelum Mess,Weekday,108,380,15,No,,Lower dinner turnout
