@@ -18,3 +18,5 @@ The Python app loads the starter observations from `roti_observations_template.c
 ```bash
 python3 -m unittest
 ```
+## Video Link
+https://drive.google.com/file/d/1w42o-PKqhxEZCV4DoDkegifNtjzbX_Ne/view?usp=sharing
